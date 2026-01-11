@@ -7,7 +7,13 @@
     --color-green: #98e690;
     --color-blue: #84d8ff;
     --color-purple: #c780ff;
+    --color-orange: #ffa726;
     --shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.text-dark {
+    color: #4a4a4a !important;
+    text-shadow: none !important;
 }
 
 body {
