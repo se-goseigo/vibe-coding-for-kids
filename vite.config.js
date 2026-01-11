@@ -14,6 +14,7 @@ export default defineConfig({
                 vercel: resolve(__dirname, 'vercel.html'),
                 qa: resolve(__dirname, 'qa.html'),
                 ending: resolve(__dirname, 'ending.html'),
+                terms: resolve(__dirname, 'terms.html'),
             },
         },
     },
