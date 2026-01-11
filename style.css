@@ -6,6 +6,7 @@
     --color-yellow: #ffde7d;
     --color-green: #98e690;
     --color-blue: #84d8ff;
+    --color-purple: #c780ff;
     --shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
 }
 
@@ -94,6 +95,10 @@ body {
     border-top: 20px solid var(--color-blue);
 }
 
+.purple-card {
+    border-top: 20px solid var(--color-purple);
+}
+
 h2 {
     font-size: 1.8rem;
     margin-top: 0;
@@ -165,6 +170,62 @@ h2 {
     border: 2px solid var(--color-green);
     align-self: flex-start;
     border-bottom-left-radius: 0;
+}
+
+/* Omikuji Styles */
+.omikuji-container {
+    text-align: center;
+    background-color: #f3e5f5;
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px dashed #d1c4e9;
+}
+
+.result-text {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #7b1fa2;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
+}
+
+.action-btn {
+    font-family: var(--font-main);
+    background-color: var(--color-red);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 6px 0px #d32f2f;
+    transition: all 0.1s;
+}
+
+.action-btn:active {
+    transform: translateY(4px);
+    box-shadow: 0px 2px 0px #d32f2f;
+}
+
+.pop-animation {
+    animation: pop 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 footer {
