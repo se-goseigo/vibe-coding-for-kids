@@ -109,11 +109,11 @@ body {
 }
 
 .floating-anim {
-    animation: float 3s ease-in-out infinite;
+    /* animation: float 3s ease-in-out infinite; */
 }
 
 .pulse-anim {
-    animation: pulse 2s infinite;
+    /* animation: pulse 2s infinite; */
 }
 
 @keyframes float {
@@ -126,6 +126,8 @@ body {
     50% {
         transform: translateY(-10px);
     }
+
+    /* Animation disabled */
 }
 
 @keyframes pulse {
@@ -140,11 +142,33 @@ body {
     100% {
         transform: scale(1);
     }
+
+    /* Animation disabled */
 }
 
 .hero-section {
     text-align: center;
-    padding: 40px 0 20px;
+    padding: 10px 0 20px;
+}
+
+.site-logo {
+    font-family: var(--font-main);
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: var(--color-purple);
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 20px;
+    background: white;
+    padding: 5px 20px;
+    border-radius: 50px;
+    border: 2px solid var(--color-purple);
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.site-logo:hover {
+    transform: translateY(-2px);
+    box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.1);
 }
 
 .cta-area {

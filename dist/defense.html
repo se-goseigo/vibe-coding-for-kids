@@ -9,86 +9,66 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700;900&display=swap"
         rel="stylesheet">
-  <link rel="stylesheet" crossorigin href="/assets/style-b8B_kmCF.css">
+  <link rel="stylesheet" crossorigin href="/assets/style-BDH8mnMK.css">
 </head>
 
 <body>
     <div id="app" class="setup-page">
         <header class="hero-section">
+            <a href="/" class="site-logo">🏠 Vibe Coding Kids</a>
             <div class="image-wrapper shield-wrapper">
                 <img src="/defense-shield.png" alt="魔法の盾" class="hero-img pulse-anim" />
                 <div class="overlay-text shield-text">王国の守り</div>
             </div>
             <h1>🛡️ 守りの魔法（セキュリティ）</h1>
-            <p class="subtitle">みんなが安全に遊べるように、バリアを張ろう！</p>
+            <p class="subtitle">アプリを公開する前の「守りの三柱」</p>
         </header>
 
         <main>
-            <div class="step-nav">
-                <a href="#step1" class="step-link">Step 1: バリア(RLS)</a>
-                <a href="#step2" class="step-link">Step 2: 掟(規約)</a>
-            </div>
-
-            <section id="step1" class="card blue-card">
-                <div class="badge">STEP 1</div>
-                <h2>🏰 お城に鍵をかけよう (RLS)</h2>
+            <section class="card blue-card">
+                <h2>🏰 ルール4：全世界公開時の強制監査</h2>
                 <p>
-                    アプリを作ると、インターネットの中に「データのお家（データベース）」ができます。<br>
-                    でも、鍵をかけ忘れると、誰でも中に入って宝物を盗めてしまいます。<br>
-                    そこで使うのが、<strong>「RLS（アールエルエス）」</strong>という魔法の鍵です。
+                    アプリを全世界に公開する時は、必ず以下の「守りの三柱」を提案・監査し、承認を得ること。
                 </p>
 
-                <div class="illustration-box">
-                    <span class="emoji">🔓</span> ➡️ <span class="emoji">🔒</span>
+                <div class="instruction-box">
+                    <h3>守りの三柱</h3>
+                    <ol>
+                        <li><strong>技術的防御 (RLS)</strong>: 全てのDBテーブルに適切なRLS（行レベルセキュリティ）が設定されているか。</li>
+                        <li><strong>法的防御 (規約等)</strong>: 利用規約・プライバシーポリシー・特商法表記の設置。</li>
+                        <li><strong>通信の安全 (HTTPS)</strong>: 通信が暗号化（SSL）されているか。</li>
+                    </ol>
                 </div>
 
                 <div class="copy-area">
-                    <h3>魔法の言葉（セキュリティ設定）</h3>
-                    <p>AIにこう頼むだけで、自動的に頑丈な鍵をかけてくれます。</p>
-                    <textarea id="rls-prompt" readonly class="short-text">
-supabaseのデータベースに、RLS（行レベルセキュリティ）を設定してください。
-「自分のデータは自分だけが見れる・編集できる」という設定にしたいです。
-初心者なので、一番安全な設定をお願いします。
-             </textarea>
-                    <button onclick="copyToClipboard('rls-prompt')" class="copy-btn">📋 コピーする</button>
-                </div>
-            </section>
+                    <h3>魔法の言葉（セキュリティ監査）</h3>
+                    <p>公開前に、AIに必ずこう聞こう！</p>
+                    <textarea id="audit-prompt" readonly class="short-text">
+【全世界公開時の強制監査】
+アプリを公開したいです。以下の「守りの三柱」について監査してください。
 
-            <section id="step2" class="card yellow-card">
-                <div class="badge">STEP 2</div>
-                <h2>📜 王国の掟を作る (利用規約)</h2>
-                <div class="image-wrapper scroll-wrapper">
-                    <img src="/defense-scroll.png" alt="ルールの巻物" class="guide-img" />
-                </div>
-                <p>
-                    たくさんの人がアプリで遊ぶようになると、ケンカが起きたり、ズルをする人が出るかもしれません。<br>
-                    そうならないために、「この国（アプリ）のルール」を決めておく必要があります。<br>
-                    これを<strong>「利用規約（りようきやく）」</strong>と言います。
-                </p>
+1. 技術的防御 (RLS): 全てのテーブルにRLSは設定されていますか？
+2. 法的防御: 利用規約・プライバシーポリシーは設置されていますか？
+3. 通信の安全: HTTPS化されていますか？
 
-                <div class="copy-area">
-                    <h3>魔法の言葉（規約の作成）</h3>
-                    <p>AIは法律の知識も持っています。下書きを書いてもらいましょう。</p>
-                    <textarea id="legal-prompt" readonly class="short-text">
-このアプリの「利用規約」と「プライバシーポリシー」の下書きを作ってください。
-個人開発のシンプルなアプリです。
-・ユーザー同士のトラブルは責任を負わない
-・個人情報の取り扱いについて
-これらを分かりやすく明記してください。
+不足があれば、作成・設定をサポートしてください。
              </textarea>
-                    <button onclick="copyToClipboard('legal-prompt')" class="copy-btn">📋 コピーする</button>
+                    <button onclick="copyToClipboard('audit-prompt')" class="copy-btn">📋 コピーする</button>
                 </div>
-                <p class="note">※ できあがった文章は、必ずお父さん・お母さんに読んでもらってね！</p>
             </section>
 
             <section class="card green-card final-step">
-                <h2>🎉 これで完璧な王国だ！</h2>
+                <h2>🚀 次は「公開」だ！</h2>
                 <p>
-                    攻め（アプリ作り）だけじゃなく、守り（セキュリティ）もできるなんて、<br>
-                    キミはもう立派な「コードの魔法使い」だ！
+                    守りが完璧なら、いよいよ世界へ飛び出そう！<br>
+                    GitHubとVercel（バーセル）を使って、みんなにアプリを見てもらう方法だよ。
                 </p>
-                <div class="nav-links">
-                    <a href="/" class="text-link">🏠 トップページに戻る</a>
+                <div class="nav-links" style="text-align: center;">
+                    <a href="/deploy.html" class="action-btn" style="background-color: var(--color-purple);">🌍 次へ：世界への扉
+                        (GitHub/Vercel)</a>
+                    <div style="margin-top: 20px;">
+                        <a href="/" class="text-link">🏠 トップページに戻る</a>
+                    </div>
                 </div>
             </section>
         </main>

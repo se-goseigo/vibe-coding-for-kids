@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>冒険の始まり - Vibe Coding Kids</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+  <div id="app" class="setup-page">
+    <header class="hero-section">
+      <a href="/" class="site-logo">🏠 Vibe Coding Kids</a>
+      <div class="image-wrapper hero-wrapper">
+        <img src="/ending-celebration.png" alt="お祝いのパーティ" class="hero-img" />
+        <div class="overlay-text shield-text">おめでとう！</div>
+      </div>
+      <h1 class="bounce-text">🎉 冒険はここから始まる！</h1>
+      <p class="subtitle">キミはもう、立派なクリエイターだ！</p>
+    </header>
+
+    <main>
+      <section class="card yellow-card">
+        <h2>🌟 君が手に入れた力</h2>
+        <ul style="list-style: none; padding: 0; font-size: 1.1rem; line-height: 1.8;">
+          <li>✅ <strong>勇気</strong>：新しいことに挑戦する心</li>
+          <li>✅ <strong>魔法</strong>：AIを使ってコードを書く力</li>
+          <li>✅ <strong>盾</strong>：自分を守るセキュリティの知識</li>
+          <li>✅ <strong>翼</strong>：世界へ作品を届ける方法</li>
+        </ul>
+      </section>
+
+      <section class="intro-box">
+        <p>
+          このサイトでのチュートリアルはこれでおしまい。<br>
+          でも、キミの本当の冒険は、今この瞬間から始まったばかり。
+        </p>
+        <p>
+          「こんなアプリがあったらいいな」<br>
+          そう思った時が、魔法を使う合図だ。<br>
+          さあ、次はどんな世界を作る？
+        </p>
+      </section>
+
+      <div class="nav-links" style="text-align: center; margin-top: 40px;">
+        <button id="celebrate-btn" class="action-btn big-start-btn">🌈 もう一度祝う！（クラッカー）</button>
+        <div style="margin-top: 30px;">
+          <a href="/" class="text-link">🏠 最初から冒険を振り返る</a>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>© 2026 niji-blog | Let's Vibe! 🌈</p>
+    </footer>
+  </div>
+  <script>
+    // Page Load Confetti
+    window.onload = function () {
+      confetti({
+        particleCount: 150,
+        spread: 70,
+        origin: { y: 0.6 }
+      });
+    };
+
+    // Button Confetti
+    document.getElementById('celebrate-btn').addEventListener('click', () => {
+      confetti({
+        particleCount: 150,
+        spread: 70,
+        origin: { y: 0.6 }
+      });
+    });
+  </script>
+</body>
+
+</html>
