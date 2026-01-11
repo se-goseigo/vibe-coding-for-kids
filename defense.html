@@ -17,51 +17,119 @@
         <header class="hero-section">
             <a href="/" class="site-logo">🏠 Vibe Coding Kids</a>
             <div class="image-wrapper shield-wrapper">
-                <img src="/defense-shield.png" alt="魔法の盾" class="hero-img pulse-anim" />
+                <img src="/defense-shield.png" alt="魔法の盾" class="hero-img" />
                 <div class="overlay-text shield-text">王国の守り</div>
             </div>
-            <h1>🛡️ 守りの魔法（セキュリティ）</h1>
-            <p class="subtitle">アプリを公開する前の「守りの三柱」</p>
+            <h1>🛡️ 守りの魔法（セキュリティ・規約）</h1>
+            <p class="subtitle">世界に公開する前に、最低限の「守り」を固めよう！</p>
         </header>
 
         <main>
-            <section class="card blue-card">
-                <h2>🏰 ルール4：全世界公開時の強制監査</h2>
+            <!-- 6.1 なぜ守りが必要か -->
+            <section class="intro-box">
+                <h2>🤔 なぜ「守り」が必要なの？</h2>
                 <p>
-                    アプリを全世界に公開する時は、必ず以下の「守りの三柱」を提案・監査し、承認を得ること。
+                    アプリを世界中に公開する（ドヤ顔する）ということは、<br>
+                    <strong>「誰がどう使うか分からない」</strong>ということでもあります。
+                </p>
+                <div class="card yellow-card" style="text-align: left; margin: 20px 0;">
+                    <ul style="list-style: none; padding: 0;">
+                        <li>😱 <strong>変なデータ</strong> を入れられるかも？</li>
+                        <li>😵 <strong>予想外の使い方</strong> をされて壊れるかも？</li>
+                        <li>😭 <strong>トラブル</strong> になっちゃうかも？</li>
+                    </ul>
+                </div>
+                <p>
+                    悪意がなくても、こういうことは起こります。<br>
+                    だから、公開する前に<strong>「2つの盾」</strong>を用意しておく必要があります。
+                </p>
+            </section>
+
+            <!-- 6.2 個人開発で最低限の守り -->
+            <section class="card blue-card">
+                <div class="badge">その１</div>
+                <h2>📜 盾①：プライバシーポリシー</h2>
+                <p class="summary">（情報の取り扱い説明書）</p>
+                <p>
+                    これは<strong>「みんなの秘密をどう扱うか」</strong>を宣言するものです。<br>
+                    難しく考えなくてOK！正直に書くことが大事です。
+                </p>
+                <ul class="check-list">
+                    <li>✅ 入力されたデータを保存する？しない？</li>
+                    <li>✅ 誰かにそのデータを渡しちゃう？</li>
+                </ul>
+                <p class="note">「何も保存しません！」「秘密は守ります！」これだけでも、あると安心できるんだよ。</p>
+            </section>
+
+            <section class="card blue-card">
+                <div class="badge">その２</div>
+                <h2>🤝 盾②：利用規約</h2>
+                <p class="summary">（アプリのルールブック）</p>
+                <p>
+                    これは<strong>「このアプリを使う時の約束」</strong>です。<br>
+                    これを書いておくと、キミ自身も守られます。
+                </p>
+                <ul class="check-list">
+                    <li>✅ 迷惑なことはしないでね（禁止事項）</li>
+                    <li>✅ もし壊れても、責任は取れないよ（免責）</li>
+                </ul>
+                <p class="note">これがないと、「お試しのおもちゃ」だと思われちゃうかも。<br>ちゃんと用意して、カッコいい開発者になろう！</p>
+            </section>
+
+            <!-- 6.3 & 6.4 AIにリスク診断させる -->
+            <section class="card purple-card">
+                <h2>🤖 AI法務大臣におまかせ！</h2>
+                <div class="image-wrapper scroll-wrapper">
+                    <img src="/defense-scroll.png" alt="ルールの巻物" class="guide-img" />
+                </div>
+                <p>
+                    「どこが危ないか分からない…」<br>
+                    当たり前です！最初から全部わかる人はいません。<br>
+                    <br>
+                    そんな時は、AIを<strong>「一人法務部（リスクを見つける係）」</strong>として使いましょう。<br>
+                    この呪文を使えば、AIがリスクを見つけて、ルールブックの下書きまで書いてくれます。
                 </p>
 
-                <div class="instruction-box">
-                    <h3>守りの三柱</h3>
-                    <ol>
-                        <li><strong>技術的防御 (RLS)</strong>: 全てのDBテーブルに適切なRLS（行レベルセキュリティ）が設定されているか。</li>
-                        <li><strong>法的防御 (規約等)</strong>: 利用規約・プライバシーポリシー・特商法表記の設置。</li>
-                        <li><strong>通信の安全 (HTTPS)</strong>: 通信が暗号化（SSL）されているか。</li>
-                    </ol>
-                </div>
-
                 <div class="copy-area">
-                    <h3>魔法の言葉（セキュリティ監査）</h3>
-                    <p>公開前に、AIに必ずこう聞こう！</p>
-                    <textarea id="audit-prompt" readonly class="short-text">
-【全世界公開時の強制監査】
-アプリを公開したいです。以下の「守りの三柱」について監査してください。
+                    <h3>魔法の言葉（リスク診断＆作成）</h3>
+                    <p>自分のアプリに合わせて、このままAIに聞いてみよう！</p>
+                    <textarea id="risk-prompt" readonly class="short-text" style="height: 350px;">
+このWebアプリを、個人開発として全世界に公開したいと考えています。
 
-1. 技術的防御 (RLS): 全てのテーブルにRLSは設定されていますか？
-2. 法的防御: 利用規約・プライバシーポリシーは設置されていますか？
-3. 通信の安全: HTTPS化されていますか？
+まず、
+・このアプリに考えられるリスクを洗い出し、
+・公開前に最低限気をつけるべきポイントを
+初心者にも分かる言葉で、箇条書きで整理してください。
 
-不足があれば、作成・設定をサポートしてください。
+【前提】
+・個人の学習・趣味開発です
+・ログイン機能はありません
+・個人情報（名前・メールアドレス等）は扱いません
+・収益化や広告はありません
+・日本向けですが、海外からもアクセス可能です
+
+そのうえで、
+・最低限用意した方がよい「利用規約」
+・最低限用意した方がよい「プライバシーポリシー」
+があれば、理由とあわせて提案してください。
              </textarea>
-                    <button onclick="copyToClipboard('audit-prompt')" class="copy-btn">📋 コピーする</button>
+                    <button onclick="copyToClipboard('risk-prompt')" class="copy-btn">📋 コピーする</button>
                 </div>
+                <p>
+                    AIが答えてくれたら、それを使って<br>
+                    <strong>「よし、これで公開しても大丈夫！」</strong><br>
+                    と自信を持って言えるようになるよ。
+                </p>
             </section>
 
             <section class="card green-card final-step">
-                <h2>🚀 次は「公開」だ！</h2>
+                <h2>🚀 ついに世界へ！</h2>
                 <p>
-                    守りが完璧なら、いよいよ世界へ飛び出そう！<br>
-                    GitHubとVercel（バーセル）を使って、みんなにアプリを見てもらう方法だよ。
+                    しっかり「守り」を固めたね。<br>
+                    これでもう、キミのアプリは「安全な王国」だ。<br>
+                    <br>
+                    次は、その成果を失わないための<strong>「記録（GitHub）」</strong>と<br>
+                    <strong>「公開（Vercel）」</strong>に進もう！
                 </p>
                 <div class="nav-links" style="text-align: center;">
                     <a href="/deploy.html" class="action-btn" style="background-color: var(--color-purple);">🌍 次へ：世界への扉
