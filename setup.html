@@ -15,43 +15,103 @@
 <body>
     <div id="app" class="setup-page">
         <header class="hero-section">
-            <img src="/setup-chest.png" alt="宝箱を開ける" class="hero-img pulse-anim" />
+            <div class="image-wrapper chest-wrapper">
+                <img src="/setup-chest.png" alt="宝箱を開ける" class="hero-img pulse-anim" />
+                <div class="overlay-text chest-text">道具をゲット！</div>
+            </div>
             <h1>⚔️ 冒険の準備をしよう！</h1>
             <p class="subtitle">魔法の道具（AIエディタ）を手に入れる儀式</p>
         </header>
 
         <main>
-            <section class="card yellow-card">
-                <h2>📦 STEP 1: Antigravity（魔法の杖）を手に入れる</h2>
+            <div class="step-nav">
+                <a href="#step1" class="step-link">Step 1: 道具</a>
+                <a href="#step2" class="step-link">Step 2: 契約</a>
+                <a href="#step3" class="step-link">Step 3: ルール</a>
+                <a href="#step4" class="step-link">Step 4: 魔法</a>
+            </div>
+
+            <section id="step1" class="card yellow-card">
+                <div class="badge">STEP 1</div>
+                <h2>📦 「Antigravity（魔法の杖）」を手に入れる</h2>
                 <p>
                     Vibe Codingをするには、Googleが作った特別な道具「Antigravity」が必要です。<br>
                     これはキミが言葉で命令すると、代わりに魔法（コード）を書いてくれる執事のようなツールだよ！
                 </p>
-                <a href="https://antigravity.google" target="_blank" class="action-btn download-btn">
-                    👉 Antigravity をダウンロードする
-                </a>
-                <p class="note">※ お父さん・お母さんに聞いてからダウンロードしてね！Antigravityは無料です。</p>
+                <div class="action-box">
+                    <p>👇 まずはここからダウンロードしてね</p>
+                    <a href="https://antigravity.google" target="_blank" class="action-btn download-btn">
+                        👉 公式サイトへ行く (Antigravity)
+                    </a>
+                    <p class="note">※ お父さん・お母さんに聞いてからダウンロードしてね！Antigravityは無料です。</p>
+                </div>
             </section>
 
-            <section class="card blue-card">
-                <h2>🧙‍♂️ STEP 2: 執事（AI）と契約する</h2>
+            <section id="step2" class="card blue-card">
+                <div class="badge">STEP 2</div>
+                <h2>🧙‍♂️ 執事（AI）と契約する</h2>
                 <p>
-                    ソフトを開いたら、Googleアカウントでログインしよう。<br>
-                    これで最強の相棒「Gemini」が味方になります。<br>
-                    <br>
-                    黒い画面が出てドキドキするかもしれないけど、大丈夫！<br>
-                    キミがやることは、右側のチャット欄で<strong>「日本語で話しかける」</strong>だけ。
+                    ソフトをインストールして開くと、ログイン画面が出ます。<br>
+                    Googleアカウントでログインして、AI（Gemini執事）と契約を結ぼう！
                 </p>
+                <div class="highlight-code">
+                    <p><strong>💡 ポイント</strong></p>
+                    <ul>
+                        <li>黒い画面が出ても怖くないよ！</li>
+                        <li>右側のチャット欄が、キミの命令を書く場所だよ。</li>
+                    </ul>
+                </div>
             </section>
 
-            <section class="card red-card">
-                <h2>📜 STEP 3: ルールブック（憲法）を渡す</h2>
+            <section id="step3" class="card red-card">
+                <div class="badge">STEP 3</div>
+                <h2>📜 「最強のルール（憲法）」を渡す</h2>
                 <p>
-                    AIは優秀だけど、たまに暴走しちゃうことがあります。<br>
+                    AIはとっても優秀だけど、たまに暴走しちゃうことがあります。<br>
                     だから最初に「このルールを守ってね」と教えてあげましょう。<br>
-                    <br>
-                    設定画面（Settings）の「Rules」に、この記事に書いてある<br>
-                    <strong>「最強の呪文（Global Rule）」</strong>をコピーして貼り付けてね！
+                    これをやると、<strong>AIがとっても賢くなります！</strong>
+                </p>
+
+                <div class="instruction-box">
+                    <h3>やり方</h3>
+                    <ol>
+                        <li>Antigravityの左下にある <strong>⚙️ Settings</strong> を押す</li>
+                        <li><strong>Rules</strong> というタブを選ぶ</li>
+                        <li><strong>+ Global</strong> ボタンを押す（または Global Rule を編集）</li>
+                        <li>下のポックスの中身をコピーして、貼り付ける</li>
+                        <li>保存（Save）する</li>
+                    </ol>
+                </div>
+
+                <div class="copy-area">
+                    <p>👇 これをコピーしてね！（「コピー」ボタンを押すと便利！）</p>
+                    <textarea id="rule-text" readonly>
+This is the Constitution for the project (Vibe Coding for Kids).
+1. Always answer in Japanese.
+2. Be kind and helpful to a 6th grader.
+3. Before writing code, always explain what you are going to do simply.
+4. If you need to install tools like Node.js, ask for permission first.
+            </textarea>
+                    <button onclick="copyRule()" class="copy-btn">📋 コピーする</button>
+                </div>
+            </section>
+
+            <section id="step4" class="card purple-card">
+                <div class="badge">STEP 4</div>
+                <h2>⚡️ 最初の魔法「Node.js」</h2>
+                <p>
+                    ここまで来たら、あとはAIに任せればOK！<br>
+                    パソコンでプログラミングをするには「Node.js（ノードジェイエス）」というエンジンが必要です。<br>
+                    でも、難しいことは考えなくて大丈夫。AIにこう頼んでみよう。
+                </p>
+                <div class="chat-example">
+                    <div class="bubble user">「Web開発をしたいので、環境作りを手伝って！Node.jsを入れたいな」</div>
+                    <div class="bubble ai">「かしこまりました！案内します！」</div>
+                </div>
+                <p>
+                    AIが「これをインストールして」と教えてくれるので、それに従えばOK！<br>
+                    <strong>分からないことや、英語のエラーが出たら、すぐにスクショを撮ってAIに見せよう。</strong><br>
+                    それがVibe Codingの極意だよ！
                 </p>
             </section>
 
@@ -77,6 +137,14 @@
             <p>© 2026 niji-blog | Let's Vibe! 🌈</p>
         </footer>
     </div>
+    <script>
+        function copyRule() {
+            const copyText = document.getElementById("rule-text");
+            copyText.select();
+            document.execCommand("copy");
+            alert("コピーしました！Antigravityに貼り付けてね！");
+        }
+    </script>
 </body>
 
 </html>
