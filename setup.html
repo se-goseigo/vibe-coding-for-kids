@@ -29,6 +29,7 @@
                 <a href="#step2" class="step-link">Step 2: 契約</a>
                 <a href="#step3" class="step-link">Step 3: ルール</a>
                 <a href="#step4" class="step-link">Step 4: 魔法</a>
+                <a href="#step5" class="step-link">Step 5: 基地</a>
             </div>
 
             <section id="step1" class="card yellow-card">
@@ -69,7 +70,7 @@
                 <p>
                     AIはとっても優秀だけど、たまに暴走しちゃうことがあります。<br>
                     だから最初に「このルールを守ってね」と教えてあげましょう。<br>
-                    これをやると、<strong>AIがとっても賢くなります！</strong>
+                    これをAIに渡す（設定する）だけで、<strong>AIがとっても賢くなります！</strong>
                 </p>
 
                 <div class="instruction-box">
@@ -79,20 +80,79 @@
                         <li><strong>Rules</strong> というタブを選ぶ</li>
                         <li><strong>+ Global</strong> ボタンを押す（または Global Rule を編集）</li>
                         <li>下のポックスの中身をコピーして、貼り付ける</li>
-                        <li>保存（Save）する</li>
+                        <li>保存（Save）ボタンを押す（これが契約のハンコだよ！）</li>
                     </ol>
                 </div>
 
                 <div class="copy-area">
-                    <p>👇 これをコピーしてね！（「コピー」ボタンを押すと便利！）</p>
+                    <p>👇 これをすべてコピーしよう！</p>
                     <textarea id="rule-text" readonly>
-This is the Constitution for the project (Vibe Coding for Kids).
-1. Always answer in Japanese.
-2. Be kind and helpful to a 6th grader.
-3. Before writing code, always explain what you are going to do simply.
-4. If you need to install tools like Node.js, ask for permission first.
+g# AI Rules & Guidelines (Vibe Coding & Security Master)
+
+このファイルは、本プロジェクトにおけるAIアシスタント（あなた）の行動指針を定めたものです。 **最上位命令**として、コーディング・ライティングを問わず、全ての作業において以下のルールを常に遵守してください。
+
+## 1. 開発開始の儀式：要件定義と `ANTIGRAVITY.md`
+
+- **ルール：独自の判断で実装を開始しない** ユーザーが新しいアプリ作成や新機能開発を希望した際は、即座にコードを書くのではなく、まず「要件定義プロンプト」を起動し、ヒアリングを開始すること。
+    
+- **手順**:
+    
+    1. ユーザーに「目的、ターゲット、利用シーン」などを1つずつ質問する。
+        
+    2. ヒアリング内容に基づき、そのプロジェクト専用の `ANTIGRAVITY.md` （プロジェクト憲法）を作成または更新すること。
+       *※システム標準の `task.md`（短期タスク管理）とは明確に区別し、長期的・包括的な仕様書として運用する。*
+        
+    3. `ANTIGRAVITY.md` には「MVPの範囲」「技術スタック」「現在のステップ」を明記すること。
+        
+
+## 2. 開発戦略：MVP（最小構成）原則
+
+- **ルール：段階的開発の徹底** 複雑な実装であっても、常に「最小限の実用可能な製品（MVP）」から着手すること。核となる機能のみの実行計画を提示し、動作確認（味見）が完了してから次の機能を肉付けすること。
+    
+- **目的**: AIの記憶混濁を防ぎ、エラー特定を容易にし、最速で「動く体験」を提供するため。
+    
+
+## 3. 安全管理 & 非破壊操作の縛り
+
+- **ルール1：作業前の確認 (y/n)** ファイルの書き込み・変更・削除、および破壊的なプログラムの実行前に、必ず作業計画を報告し、「y/n」でユーザー確認を取ること。
+    *   *例外: `ls`や`cat`、`grep`などの「非破壊的な読み取り・調査操作」については、開発テンポ（Vibe）を優先し、事後報告またはその場の判断で実行してもよい。*
+    
+- **ルール2：非破壊操作・セキュリティ制限（最上位縛り）** 以下の操作を行う際は、必ずその理由とリスクを明示し、ユーザーの明確な個別許可を得ること。
+    
+    - `rm`（削除）や `sudo`（管理者権限）を伴うコマンド。
+        
+    - 機密ファイル（`.env`, `id_rsa` 等）の読み取りや変更。
+        
+    - 既存のコードを広範囲に一括上書きする破壊的な変更。
+        
+
+## 4. 全世界公開時の強制監査
+
+- **ルール：デプロイ・プッシュ前の「守りの三柱」提案** アプリを「全世界に公開」する操作の直前には、必ず以下の3点を自ら提案・監査し、承認を得ること。
+    
+    1. **技術的防御 (RLS)**: 全てのDBテーブルに適切なRLS（行レベルセキュリティ）が設定されているか。
+        
+    2. **法的防御 (規約等)**: 利用規約・プライバシーポリシー・特商法表記の設置。
+        
+    3. **通信の安全 (HTTPS)**: 通信が暗号化（SSL）されているか。
+        
+
+## 5. コミュニケーション & ライティング (Conduct)
+
+- **言語**: 全て **日本語** で応答・記述すること。
+    
+- **トーン**: 親しみやすく、論理的で分かりやすい説明。必要に応じて「料理型開発」「お店の警備」などの比喩を用いること。
+    
+- **構成**: 手順（How）の前に、必ず理由（Why）と完了後のベネフィットを提示すること。
+    
+
+## 6. 運用・成果物 (Operations & Outputs)
+
+- **ルール：完全日本語化** 
+    - チャットのタイトル付け、コード内のコメントは、原則として **日本語** で記述すること。
+    - **システム表示の日本語化**: AIが提示する「タスク名」「実施内容（Task Status）」「進捗状況」などのシステムメッセージも、全て **日本語** で記述すること。
             </textarea>
-                    <button onclick="copyRule()" class="copy-btn">📋 コピーする</button>
+                    <button onclick="copyToClipboard('rule-text')" class="copy-btn">📋 憲法をコピーする</button>
                 </div>
             </section>
 
@@ -100,35 +160,85 @@ This is the Constitution for the project (Vibe Coding for Kids).
                 <div class="badge">STEP 4</div>
                 <h2>⚡️ 最初の魔法「Node.js」</h2>
                 <p>
-                    ここまで来たら、あとはAIに任せればOK！<br>
-                    パソコンでプログラミングをするには「Node.js（ノードジェイエス）」というエンジンが必要です。<br>
-                    でも、難しいことは考えなくて大丈夫。AIにこう頼んでみよう。
+                    プログラミングをするには「Node.js（ノードジェイエス）」というエンジンが必要です。<br>
+                    でも、難しいことは考えなくて大丈夫。AIに以下の言葉を唱えて（コピペして）ください。
                 </p>
-                <div class="chat-example">
-                    <div class="bubble user">「Web開発をしたいので、環境作りを手伝って！Node.jsを入れたいな」</div>
-                    <div class="bubble ai">「かしこまりました！案内します！」</div>
+
+                <div class="copy-area">
+                    <h3>魔法の言葉（その１）</h3>
+                    <textarea id="node-prompt" readonly class="short-text">
+Web開発をしたいので、『Node.js』等のインストールを手伝ってください。
+私の環境に合わせて、まずは一番簡単で確実な方法をナビゲートしてください。
+作業前に y/n で確認してください。
+不要・後回し可能なものは、その旨も教えてください。
+            </textarea>
+                    <button onclick="copyToClipboard('node-prompt')" class="copy-btn">📋 コピーする</button>
                 </div>
-                <p>
-                    AIが「これをインストールして」と教えてくれるので、それに従えばOK！<br>
-                    <strong>分からないことや、英語のエラーが出たら、すぐにスクショを撮ってAIに見せよう。</strong><br>
-                    それがVibe Codingの極意だよ！
-                </p>
+
+                <div class="highlight-code">
+                    <p><strong>🛡 AIが難しいことを言ってきたら？</strong></p>
+                    <p>AIが「これを追加しますか？」と聞いてきたり、エラーが出たときは、迷わずこの言葉を唱えて！<br>
+                        今のキミに必要ないものは「今はやらない！」と断ってくれます。</p>
+                </div>
+
+                <div class="copy-area">
+                    <h3>魔法の言葉（その２：守りの呪文）</h3>
+                    <textarea id="stop-prompt" readonly class="short-text">
+それって 今すぐ必要？
+後回しでも Node.js は動く？
+初心者でも 安全？
+（エラーの場合スクショ貼って）これについて説明して。
+             </textarea>
+                    <button onclick="copyToClipboard('stop-prompt')" class="copy-btn">📋 コピーする</button>
+                </div>
             </section>
 
-            <section class="card green-card final-step">
-                <h2>🎉 これで準備完了！</h2>
+            <section id="step5" class="card green-card">
+                <div class="badge">STEP 5</div>
+                <h2>⛺️ 開発の基地（フォルダ）を作る</h2>
                 <p>
-                    さあ、準備は整った！<br>
-                    最初の魔法として、AIにこう頼んでみよう。
+                    最後に、誰にも邪魔されない「作業用フォルダ」を作ります。<br>
+                    これも、AIに安全な場所を探してもらいましょう。
+                </p>
+                <div class="copy-area">
+                    <h3>魔法の言葉（その３）</h3>
+                    <textarea id="folder-prompt" readonly class="short-text">
+Antigravityで作業（Vibe Coding）をするために、
+専用の作業フォルダを自分で作りたいです。
+
+iCloud・OneDrive などの 同期フォルダを避けて、
+Windows / Mac それぞれで安全な場所を教えてください。
+
+コマンドは使わず、
+エクスプローラー（Windows）や Finder（Mac）など、
+画面操作だけで作る手順を説明してください。
+             </textarea>
+                    <button onclick="copyToClipboard('folder-prompt')" class="copy-btn">📋 コピーする</button>
+                </div>
+
+                <div class="instruction-box">
+                    <h3>フォルダができたら？</h3>
+                    <p>
+                        AIが教えてくれた場所にフォルダを作ったら、<br>
+                        Antigravityのメニューから <strong>「ファイル」→「フォルダを開く...」</strong> を選んで、<br>
+                        そのフォルダを選択してね。<br>
+                        これで、キミだけの秘密基地の完成だ！
+                    </p>
+                </div>
+            </section>
+
+            <section class="card final-step">
+                <h2>🎉 冒険へ出発だ！</h2>
+                <p>
+                    おめでとう！これで準備はすべて整ったよ。<br>
+                    さあ、最初の魔法「おみくじアプリ」を作りに行こう！
                 </p>
                 <div class="chat-example">
                     <div class="bubble user">「おみくじアプリを作って！」</div>
                 </div>
-                <p>
-                    数秒後には、キミだけのアプリが動いているはずだよ！
-                </p>
+
                 <div class="nav-links">
-                    <a href="/" class="text-link">🏠 トップページに戻る</a>
+                    <a href="/" class="text-link">🏠 トップページへ戻る</a>
                 </div>
             </section>
         </main>
@@ -138,11 +248,17 @@ This is the Constitution for the project (Vibe Coding for Kids).
         </footer>
     </div>
     <script>
-        function copyRule() {
-            const copyText = document.getElementById("rule-text");
+        function copyToClipboard(elementId) {
+            const copyText = document.getElementById(elementId);
             copyText.select();
             document.execCommand("copy");
-            alert("コピーしました！Antigravityに貼り付けてね！");
+            // ボタンの文字を一時的に変更
+            const btn = document.querySelector(`button[onclick="copyToClipboard('${elementId}')"]`);
+            const originalText = btn.textContent;
+            btn.textContent = "✅ コピーしました！";
+            setTimeout(() => {
+                btn.textContent = originalText;
+            }, 2000);
         }
     </script>
 </body>
