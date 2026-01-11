@@ -450,6 +450,18 @@ footer {
     color: #888;
 }
 
+.legal-link {
+    color: #888;
+    text-decoration: underline;
+    margin-left: 10px;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.legal-link:hover {
+    color: var(--color-purple);
+}
+
 .text-link {
     color: var(--color-blue);
     font-weight: bold;
