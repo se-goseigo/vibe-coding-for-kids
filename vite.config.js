@@ -7,6 +7,7 @@ export default defineConfig({
             input: {
                 main: resolve(__dirname, 'index.html'),
                 setup: resolve(__dirname, 'setup.html'),
+                defense: resolve(__dirname, 'defense.html'),
             },
         },
     },
