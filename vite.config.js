@@ -7,8 +7,11 @@ export default defineConfig({
             input: {
                 main: resolve(__dirname, 'index.html'),
                 setup: resolve(__dirname, 'setup.html'),
+                creation: resolve(__dirname, 'creation.html'),
+                mvp: resolve(__dirname, 'mvp.html'),
                 defense: resolve(__dirname, 'defense.html'),
-                deploy: resolve(__dirname, 'deploy.html'),
+                github: resolve(__dirname, 'github.html'),
+                vercel: resolve(__dirname, 'vercel.html'),
                 qa: resolve(__dirname, 'qa.html'),
                 ending: resolve(__dirname, 'ending.html'),
             },

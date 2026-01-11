@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>空への翼 - Step 7: Vibe Coding Kids</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700;900&display=swap"
+        rel="stylesheet">
+  <link rel="stylesheet" crossorigin href="/assets/style-BDH8mnMK.css">
+</head>
+
+<body>
+    <div id="app" class="setup-page">
+        <header class="hero-section">
+            <a href="/" class="site-logo">🏠 Vibe Coding Kids</a>
+            <div class="image-wrapper hero-wrapper">
+                <img src="/char_07.png" alt="空を飛ぶ少年" class="hero-img" />
+                <div class="overlay-text shield-text">世界へ！</div>
+            </div>
+            <h1>☁️ 空への翼 (Vercel)</h1>
+            <p class="subtitle">装備その7：魔法を世界中に届けよう</p>
+        </header>
+
+        <main>
+            <section class="intro-box">
+                <h2>🌍 キミの魔法、ここから世界へ！</h2>
+                <p>
+                    <strong>「Vercel（バーセル）」</strong>という空の城を使えば、<br>
+                    キミのパソコンにある魔法を、一瞬で世界中の友達のスマホに届けることができるんだ。<br>
+                    しかも、GitHubと連携していれば自動で更新してくれるよ！
+                </p>
+            </section>
+
+            <section class="card blue-card">
+                <h2>🚀 デプロイ（公開）の呪文</h2>
+                <p>
+                    難しそうに見えるけど、実はコマンド一つ。<br>
+                    さあ、AIに唱え方を教わろう！
+                </p>
+                <div class="copy-area">
+                    <h3>魔法の言葉（Vercel公開）</h3>
+                    <textarea id="vercel-prompt" readonly class="short-text">
+GitHubにプッシュしたこのアプリを、Vercelを使って無料で公開（デプロイ）したいです。
+「npx vercel」コマンドを使って、初回デプロイをする手順を教えてください。
+Vercelのアカウント登録も含めてナビゲートしてください。
+             </textarea>
+                    <button onclick="copyToClipboard('vercel-prompt')" class="copy-btn">📋 コピーする</button>
+                </div>
+            </section>
+
+            <section class="card green-card final-step">
+                <h2>🤔 でも、うまくいかなかったら？</h2>
+                <p>
+                    初めての冒険にトラブルはつきもの。<br>
+                    エラーが出た時や、困った時のために「賢者の知恵」を授けるよ。
+                </p>
+                <div class="nav-links" style="text-align: center;">
+                    <a href="/qa.html" class="action-btn" style="background-color: var(--color-yellow);">💡 次へ：賢者の知恵
+                        (Step 8)</a>
+                    <div style="margin-top: 20px;">
+                        <a href="/" class="text-link">🏠 トップページへ戻る</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2026 niji-blog | Step 7/9</p>
+        </footer>
+    </div>
+    <script>
+        function copyToClipboard(elementId) {
+            const copyText = document.getElementById(elementId);
+            copyText.select();
+            document.execCommand("copy");
+            const btn = document.querySelector(`button[onclick="copyToClipboard('${elementId}')"]`);
+            const originalText = btn.textContent;
+            btn.textContent = "✅ コピーしました！";
+            setTimeout(() => {
+                btn.textContent = originalText;
+            }, 2000);
+        }
+    </script>
+</body>
+
+</html>

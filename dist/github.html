@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>記録の魔法 - Step 6: Vibe Coding Kids</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700;900&display=swap"
+        rel="stylesheet">
+  <link rel="stylesheet" crossorigin href="/assets/style-BDH8mnMK.css">
+</head>
+
+<body>
+    <div id="app" class="setup-page">
+        <header class="hero-section">
+            <a href="/" class="site-logo">🏠 Vibe Coding Kids</a>
+            <div class="image-wrapper hero-wrapper">
+                <img src="/char_06.png" alt="魔導書に書き込む少年" class="hero-img" />
+                <div class="overlay-text shield-text">記録せよ！</div>
+            </div>
+            <h1>🪶 記録の魔法 (GitHub)</h1>
+            <p class="subtitle">装備その6：魔法を魔導書に保存しよう</p>
+        </header>
+
+        <main>
+            <section class="intro-box">
+                <h2>📚 魔法が消えないように</h2>
+                <p>
+                    せっかく作った魔法（コード）が、パソコンが壊れて消えちゃったら大変！<br>
+                    世界中の魔法使いが集まる巨大図書館<strong>「GitHub（ギットハブ）」</strong>に、<br>
+                    キミの魔法を預けておこう。
+                </p>
+            </section>
+
+            <section class="card purple-card">
+                <h2>1. 図書館の会員証を作る</h2>
+                <p>
+                    まずは「GitHub」というサイトで、無料のアカウントを作ろう。<br>
+                    これがキミの「魔法使いID」になるよ。
+                </p>
+                <div class="nav-links" style="text-align: center;">
+                    <a href="https://github.com/signup" target="_blank" class="action-btn">🔗 GitHubに登録する (別タブ)</a>
+                </div>
+            </section>
+
+            <section class="card blue-card">
+                <h2>2. 魔法の羽ペン (GitHub CLI)</h2>
+                <p>
+                    登録できたら、パソコンから直接書き込める魔法の道具<br>
+                    <strong>「GitHub CLI（ギットハブ・シーエルアイ）」</strong>を設定しよう。
+                </p>
+                <div class="copy-area">
+                    <h3>魔法の呪文（設定サポート）</h3>
+                    <textarea id="gh-prompt" readonly class="short-text">
+GitHubのアカウントは作りました。
+パソコンからGitHubを使えるようにするために、
+「GitHub CLI」のインストールと、ログイン設定（gh auth login）の手順を教えてください。
+Windows / Mac の環境に合わせて説明してください。
+             </textarea>
+                    <button onclick="copyToClipboard('gh-prompt')" class="copy-btn">📋 コピーする</button>
+                </div>
+            </section>
+
+            <section class="card green-card final-step">
+                <h2>🚀 次はいよいよ「空」へ！</h2>
+                <p>
+                    記録の準備はバッチリだね。<br>
+                    いよいよ、キミの魔法を世界中に届ける時が来た！
+                </p>
+                <div class="nav-links" style="text-align: center;">
+                    <a href="/vercel.html" class="action-btn" style="background-color: var(--color-orange);">☁️ 次へ：空への翼
+                        (Step 7)</a>
+                    <div style="margin-top: 20px;">
+                        <a href="/" class="text-link">🏠 トップページへ戻る</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2026 niji-blog | Step 6/9</p>
+        </footer>
+    </div>
+    <script>
+        function copyToClipboard(elementId) {
+            const copyText = document.getElementById(elementId);
+            copyText.select();
+            document.execCommand("copy");
+            const btn = document.querySelector(`button[onclick="copyToClipboard('${elementId}')"]`);
+            const originalText = btn.textContent;
+            btn.textContent = "✅ コピーしました！";
+            setTimeout(() => {
+                btn.textContent = originalText;
+            }, 2000);
+        }
+    </script>
+</body>
+
+</html>

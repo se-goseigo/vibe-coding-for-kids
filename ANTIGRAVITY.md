@@ -38,13 +38,25 @@
 - [x] **Phase 3: RPG風ガイドサイト化 & ビジュアル強化**
 - [x] **Phase 4: 設定ガイド詳細化 & 画像日本語化**
 - [x] **Phase 5: 守りのフェーズ (Security & Legal)**
-- [ ] **Phase 6: ナビゲーション改善 & コンテンツ完結 (Deploy, Q&A, Ending)**
+- [x] **Phase 6: ナビゲーション改善 & コンテンツ完結 (Deploy, Q&A, Ending)**
+- [ ] **Phase 7: 全体構成の大改修 (9ステップの冒険)**
+    - **コンセプト**: 見習い魔法使いが、ページを進むごとに装備（知識・ツール）を手に入れ、大魔法使いになるRPG。
+    - **キャラクター**: 日本のアニメ風の男の子。ページごとに装備が増えていく（固定キャラ）。
+    - **ページ構成**:
+        1. **Top (`index.html`)**: Vibe Codingとは？ 作れるもの（おみくじDemo）。冒険の始まり。
+        2. **Setup (`setup.html`)**: 魔導書（Antigravity）と宝玉（Node.js/Settings）の入手。
+        3. **Creation (`creation.html`)**: 魔法の実践。おみくじアプリを作る（コード＆デザイン）。
+        4. **MVP (`mvp.html`)**: 魔法の基本心得。小さく作って大きく育てる。
+        5. **Defense (`defense.html`)**: 守りの盾。プライバシーポリシーと利用規約。
+        6. **Save (`github.html`)**: 記録の魔法。GitHubアカウントと **GitHub CLI** の設定。
+        7. **Publish (`deploy.html`)**: 空への解放。Vercelでの公開。
+        8. **Q&A (`qa.html`)**: 賢者の知恵。
+        9. **Ending (`ending.html`)**: 大魔法使いの誕生。
     - **UI改修**: 画像のアニメーション停止、全ページにホームボタン（ロゴ）設置、ページ下部にも遷移ボタン設置。
     - **Defense改修**: 「守りの三柱（RLS, 規約, HTTPS）」の元文章をそのまま掲載。
     - **新規ページ**: 
         - `deploy.html`: GitHub/Vercelの解説。
         - `qa.html`: Q&Aセクション。
-        - `ending.html`: 終わりの挨拶。
     - **導線**: Setup -> Defense -> Deploy -> Q&A -> Ending の完全なツアー導線を作る。
     - **6章の内容**: アプリを公開する前に必要な「防御（セキュリティ）」と「ルール（規約）」を解説。
     - **RPGテーマ**: 「お城のバリア（RLS）」と「王国の掟（利用規約）」として表現。

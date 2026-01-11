@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>魔法の実践 - Step 3: Vibe Coding Kids</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="app" class="setup-page">
+        <header class="hero-section">
+            <a href="/" class="site-logo">🏠 Vibe Coding Kids</a>
+            <div class="image-wrapper hero-wrapper">
+                <img src="/char_03.png" alt="魔法を使う少年" class="hero-img" />
+                <div class="overlay-text shield-text">魔法発動！</div>
+            </div>
+            <h1>✨ 魔法の実践</h1>
+            <p class="subtitle">装備その3：おみくじを作ってみよう</p>
+        </header>
+
+        <main>
+            <section class="card orange-card">
+                <h2>🧙‍♂️ 最初の一歩</h2>
+                <p>
+                    まずは「おみくじ」を作ってみよう。<br>
+                    最初はシンプルで大丈夫。「大吉が出るボタン」を作るだけでも立派な魔法だ！
+                </p>
+                <div class="copy-area">
+                    <h3>魔法の呪文（その1）</h3>
+                    <textarea id="prompt-1" readonly class="short-text">
+HTMLとJavaScriptを使って、シンプルな「おみくじアプリ」を作ってください。
+ボタンを押すと「大吉」「中吉」「小吉」のどれかが画面に出るようにしてください。
+デザインはまだ無くていいです。
+             </textarea>
+                    <button onclick="copyToClipboard('prompt-1')" class="copy-btn">📋 コピーする</button>
+                </div>
+            </section>
+
+            <section class="card purple-card">
+                <h2>🎨 魔法を強化する (デザイン)</h2>
+                <p>
+                    動くようになったら、次はカッコよくしよう！<br>
+                    小学生のみんなが喜ぶような、虹色でポップなデザインにしてみよう。
+                </p>
+                <div class="copy-area">
+                    <h3>魔法の呪文（その2）</h3>
+                    <textarea id="prompt-2" readonly class="short-text">
+さっきのおみくじアプリを、小学生が喜ぶようなデザインにしてください。
+・全体を虹色やパステルカラーでポップに
+・文字を丸みのあるフォントに
+・ボタンを大きく押しやすく
+・結果が出るときにちょっとしたアニメーションをつけて
+             </textarea>
+                    <button onclick="copyToClipboard('prompt-2')" class="copy-btn">📋 コピーする</button>
+                </div>
+            </section>
+
+            <section class="intro-box">
+                <p>すごい！自分だけのアプリが動いたね。<br>
+                    でも、プロの魔法使いには「心得」が必要なんだ。</p>
+                <div class="nav-links" style="text-align: center; margin-top: 20px;">
+                    <a href="/mvp.html" class="action-btn" style="background-color: var(--color-green);">🧱 次へ：魔法の心得
+                        (Step 4)</a>
+                    <div style="margin-top: 20px;">
+                        <a href="/" class="text-link">🏠 トップページへ戻る</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2026 niji-blog | Step 3/9</p>
+        </footer>
+    </div>
+    <script>
+        function copyToClipboard(elementId) {
+            const copyText = document.getElementById(elementId);
+            copyText.select();
+            document.execCommand("copy");
+            const btn = document.querySelector(`button[onclick="copyToClipboard('${elementId}')"]`);
+            const originalText = btn.textContent;
+            btn.textContent = "✅ コピーしました！";
+            setTimeout(() => {
+                btn.textContent = originalText;
+            }, 2000);
+        }
+    </script>
+</body>
+
+</html>
