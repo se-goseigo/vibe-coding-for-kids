@@ -440,3 +440,25 @@ footer {
     color: white;
     border-color: var(--color-blue);
 }
+
+/* Guide Image */
+.settings-visual {
+    text-align: center;
+    margin: 20px 0;
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+}
+
+.guide-img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.caption {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 5px;
+}
