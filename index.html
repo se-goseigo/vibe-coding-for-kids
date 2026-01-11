@@ -16,63 +16,36 @@
 <body>
     <div id="app">
         <header class="hero-section">
+            <div class="hero-image-container">
+                <img src="/hero-wizard.png" alt="魔法使いの少年" class="hero-img floating-anim" />
+            </div>
             <h1 class="bounce-text">Vibe Coding for Kids!</h1>
-            <p class="subtitle">AIと一緒なら、キミも魔法使いだ！</p>
+            <p class="subtitle">AIという「魔法」を使って、自分だけの世界を作ろう！</p>
+
+            <div class="cta-area">
+                <a href="/setup.html" class="action-btn big-start-btn">
+                    ⚔️ 冒険の書（はじめかた）を開く
+                </a>
+                <p class="mini-text">↑ここから設定方法が見れるよ！</p>
+            </div>
         </header>
 
         <main>
-            <section class="card red-card">
-                <h2>🤔 Vibe Coding ってなに？</h2>
+            <section class="intro-box">
+                <h2>✨ プログラミングは「魔法」だ！</h2>
                 <p>
-                    Vibe Coding（バイブコーディング）は、<br>
-                    <strong>「AIにお願いして、アプリを作ってもらう」</strong><br>
-                    新しい作り方のことだよ。<br>
-                    難しい英語（コード）は、AIが書いてくれるから安心してね！
+                    難しい呪文（コード）を覚える必要はありません。<br>
+                    <strong>「こんなことしたい！」</strong>と願うだけで、<br>
+                    AIがあなたの望みを叶えてくれます。
                 </p>
             </section>
 
-            <section class="card yellow-card">
-                <h2>🚀 最初は「小さく」作ろう！(MVP)</h2>
-                <div class="illustration-box">
-                    <span class="emoji">🧱</span> ➡️ <span class="emoji">🏰</span>
-                </div>
-                <p>
-                    すごーいゲームを作りたい！って思うよね。<br>
-                    でも、いきなりお城を作ろうとすると、途中で崩れちゃうかも…😰
-                </p>
-                <div class="highlight-box">
-                    <h3>だいじなルール：MVP（エム・ブイ・ピー）</h3>
-                    <p>
-                        まずは<strong>「一番シンプルなもの」</strong>を作って、<br>
-                        動くかどうか試してみよう！<br>
-                        <br>
-                        例：RPGゲームを作りたいなら…<br>
-                        ❌ いきなり全ステージ作る<br>
-                        ⭕️ まずは勇者が「歩けるだけ」にする
-                    </p>
-                </div>
-            </section>
-
-            <section class="card green-card">
-                <h2>🤖 AIへの頼み方のコツ</h2>
-                <p>
-                    AIはとっても優秀だけど、<br>
-                    一度にたくさん頼むと混乱しちゃうんだ。<br>
-                    <strong>「ひとつずつ」</strong>お願いするのがコツだよ！
-                </p>
-                <div class="chat-example">
-                    <div class="bubble user">「おみくじアプリを作って！」</div>
-                    <div class="bubble ai">「わかりました！作ります！」</div>
-                    <div class="bubble user">「動いたら、次はデザインを赤くして！」</div>
-                    <div class="bubble ai">「赤くしました！」</div>
-                </div>
-            </section>
-
+            <!-- おみくじ機能 (Phase 2) -->
             <section class="card purple-card" id="omikuji-section">
-                <h2>🏯 運試し！AIおみくじ</h2>
+                <h2>🏯 実践！魔法体験（おみくじ）</h2>
                 <p>
-                    Vibe Codingで作った「おみくじ」を試してみよう！<br>
-                    ボタンを押すと、今日の運勢が出るよ👇
+                    これは実際にAIに作ってもらった「おみくじ」だよ。<br>
+                    キミもすぐに、これくらいの魔法は使えるようになる！
                 </p>
                 <div class="omikuji-container">
                     <div id="omikuji-result" class="result-text">???</div>
@@ -80,12 +53,23 @@
                 </div>
             </section>
 
+            <section class="card yellow-card">
+                <h2>🚀 まずは「小さく」作ろう！(MVP)</h2>
+                <div class="illustration-box">
+                    <span class="emoji">🧱</span> ➡️ <span class="emoji">🏰</span>
+                </div>
+                <p>
+                    すごーいゲームも、最初はちいさな一歩から！<br>
+                    まずは「動くもの」を作って、どんどん改造していくのが<br>
+                    最強の魔法使いへの近道だよ。
+                </p>
+            </section>
+
             <section class="card blue-card">
                 <h2>🌍 世界に公開しよう！</h2>
                 <p>
-                    できあがったアプリは、自分だけのものにしておくのはもったいない！<br>
-                    <strong>「公開（デプロイ）」</strong>すれば、<br>
-                    世界の裏側の友達にも遊んでもらえるよ！
+                    できあがったアプリは、世界のみんなに見せることができるよ。<br>
+                    キミの作ったゲームで、世界の誰かが遊んでくれるかも！？
                 </p>
             </section>
         </main>
